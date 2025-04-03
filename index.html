@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Rerastifpra </title>
-    <h1> World Private Limited </h1>
-    <h2>Food for Future</h2>
     <style>
         /* Global Styles */
         * {
@@ -27,9 +25,9 @@
             padding: 0 20px;
         }
 
-        /* Header Styles */
+        /* Header */
         header {
-            background-color: #165a31; /* Darker Green for Better Visibility */
+            background-color: #165a31;
             padding: 20px;
             text-align: left;
             display: flex;
@@ -114,30 +112,27 @@
             display: block;
         }
         
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-top: 20px;
-            justify-content: center;
-        }
-        
-        .gallery-item {
-            width: 200px;
+        /* Contact Us & Footer */
+        .contact-us {
+            padding: 20px;
+            background-color: #e3e3e3;
             text-align: center;
+            margin-top: 40px;
         }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .gallery-item p {
+
+        .footer {
+            background-color: #165a31;
+            color: white;
+            text-align: center;
+            padding: 15px;
             margin-top: 10px;
-            font-weight: bold;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-title {
+                font-size: 22px;
+            }
         }
     </style>
 </head>
@@ -146,25 +141,25 @@
     <!-- Header -->
     <header>
         <div>
-            <p class="header-title"> RERASTIFPRA</p>
+            <p class="header-title">Rerastifpra - Big</p>
             <p class="header-title"> World Private Limited</p>
             <p class="tagline">Food for Future</p>
         </div>
         <img src="images/logo.jpeg.jpeg" alt="Rerastifpra Logo" class="logo">
     </header>
 
-    <!-- Image Slider (Above About Us) -->
+    <!-- Image Slider -->
     <div class="slider">
         <img src="images/diary.jpeg.jpeg" class="active">
-        <img src="https://via.placeholder.com/800x300?text=Image+2">
-        <img src="https://via.placeholder.com/800x300?text=Image+3">
-        <img src="https://via.placeholder.com/800x300?text=Image+4">
+        <img src="images/fruits.jpeg">
+        <img src="images/fish.jpeg">
+        <img src="images/snack.jpeg">
     </div>
 
     <!-- About Us Section -->
     <section class="about-us">
         <h2>About Us</h2>
-        <p>Rerastifpra World Private Limited is a pioneering company...</p>
+        <p>Rerastifpra World Private Limited is a pioneering company dedicated to creating sustainable food solutions for the future. Our mission is to develop innovative food products that are nutritious, environmentally friendly, and accessible to all </p>
     </section>
 
     <!-- Dropdown Sections -->
@@ -173,16 +168,12 @@
             <button class="dropdown-btn">Our Products</button>
             <div class="dropdown-content">
                 <p>Discover our range of innovative food products designed for the future:</p>
-                <div class="gallery">
-                    <div class="gallery-item">
-                        <img src="https://via.placeholder.com/200x150?text=Product+1" alt="Product 1">
-                        <p>Dairy products</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://via.placeholder.com/200x150?text=Product+2" alt="Product 2">
-                        <p>Fruits and vegetables</p>
-                    </div>
-                </div>
+                <ul>
+                    <li>Dairy products</li>
+                    <li>Fruits and vegetables</li>
+                    <li> Indian snacks </li>
+                    <li> Fish and Meat </li>
+                </ul>
             </div>
         </div>
 
@@ -190,22 +181,28 @@
             <button class="dropdown-btn">Recognitions</button>
             <div class="dropdown-content">
                 <p>We're proud to have received these awards:</p>
-                <div class="gallery">
-                    <div class="gallery-item">
-                        <img src="https://via.placeholder.com/200x150?text=Award+1" alt="Award 1">
-                        <p>FSSAI certified</p>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="https://via.placeholder.com/200x150?text=Award+2" alt="Award 2">
-                        <p>ZED Bronze certificate</p>
-                    </div>
-                </div>
+                <ul>
+                    <li>FSSAI certified</li>
+                    <li>ZED Bronze certificate</li>
+                </ul>
             </div>
         </div>
     </section>
 
+    <!-- Contact Us Section -->
+    <section class="contact-us">
+        <h2>Contact Us</h2>
+        <p>Email: contact@rerastifpra.com</p>
+        <p>Phone: +91-1234567890</p>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Rerastifpra World Private Limited. All rights reserved.</p>
+    </footer>
+
     <script>
-        // Image Slider Functionality
+        // Image Slider
         let images = document.querySelectorAll(".slider img");
         let currentIndex = 0;
 
